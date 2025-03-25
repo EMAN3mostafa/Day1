@@ -24,7 +24,7 @@ void main() {
       print("See You Back");
       break;
     } else {
-      print("Invalid choice, please try again.");
+      print("Invalid choice, please try again");
     }
   }
 }
@@ -42,19 +42,19 @@ void bookSeat(
 
     int row = int.tryParse(rowInput ?? '') ?? -1;
     if (row < 1 || row > 5) {
-      print("Invalid row, please enter a number between 1 and 5.");
+      print("Invalid row, please enter a number between 1 and 5");
       continue;
     }
 
     stdout.write("Enter column (1-5): ");
     int col = int.tryParse(stdin.readLineSync() ?? '') ?? -1;
     if (col < 1 || col > 5) {
-      print("Invalid column, please enter a number between 1 and 5.");
+      print("Invalid column, please enter a number between 1 and 5");
       continue;
     }
 
     if (seats[row - 1][col - 1] == 'B') {
-      print("Seat already booked, choose another.");
+      print("Seat already booked, choose another");
       continue;
     }
 
@@ -79,7 +79,7 @@ void showSeats(List<List<String>> seats) {
 
 void showBookings(Map<String, Map<String, String>> bookings) {
   if (bookings.isEmpty) {
-    print("No bookings yet.");
+    print("No bookings yet");
     return;
   }
   print("Users Booking Details:");
